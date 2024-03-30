@@ -1,14 +1,14 @@
-![image](https://github.com/maxiparis/RomanNumerals/assets/127634681/4a46b2c2-0237-4fe5-bfc0-a835c549b1b4)# Roman Numeral Converter
+# Roman Numeral Converter
 
 ## Installation
-
 1. Install Java JDK (version 20)
 2. Download (or clone repository) the RomanNumerals.jar file from out/artifacts folder.
 
 ## Usage
-
+Run this command in the terminal: `java -jar RomanNumerals.jar` (make sure to be in the directory that contains the repository or the RomanNumerals.jar file)
 
 ## Documentation
+The process of solving this challenge is contained in 2 files in the Documentation folder. The .pdf file contains details regarding the structure of the classes, the roman numerals rules my converter needed to follow, etc. The .xlsx file was used to think about the problem before solving it and understanding the algorithm I was to develop. 
 
 ## Features
 1. Conversion from decimal numbers to Roman numerals.

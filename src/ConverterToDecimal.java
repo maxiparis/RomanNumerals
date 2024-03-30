@@ -19,7 +19,7 @@ public class ConverterToDecimal extends InputManager {
 
             String romanNumeral = input.toUpperCase();
             Integer decimal = convertToDecimal(romanNumeral);
-            if (decimal != null){
+            if (decimal != null) {
                 System.out.println("Result: " + romanNumeral + " = " + decimal + "\n");
             } else {
                 printErrorMessage("Invalid input.");

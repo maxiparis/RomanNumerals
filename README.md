@@ -8,7 +8,7 @@
 Run this command in the terminal: `java -jar RomanNumerals.jar` (make sure to be in the directory that contains the repository or the RomanNumerals.jar file)
 
 ## Documentation
-The process of solving this challenge is contained in 2 files in the Documentation folder. The .pdf file contains details regarding the structure of the classes, the roman numerals rules my converter needed to follow, etc. The .xlsx file was used to think about the problem before solving it and understanding the algorithm I was to develop. 
+The documents that containe my thought process to solve this challenge is contained in 2 files in the Documentation folder. The .pdf file contains details regarding the structure of the classes, the roman numerals rules my converter needed to follow, and other details and tasks. The .xlsx file was used to think about the problem before solving it and understanding the algorithm I was to develop, considering the rules to follow.
 
 ## Features
 1. Conversion from decimal numbers to Roman numerals.

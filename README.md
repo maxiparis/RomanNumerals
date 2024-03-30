@@ -24,3 +24,11 @@ The process of solving this challenge is contained in 2 files in the Documentati
    * Symbol X can be subtracted from symbols L and C only.
 
 ## Example
+
+1. Running the program:
+   ![image](https://github.com/maxiparis/RomanNumerals/assets/127634681/47aeb786-5433-45e4-b9f7-e154b0886f4d)
+2. Converting to a roman numeral
+   ![image](https://github.com/maxiparis/RomanNumerals/assets/127634681/5303b8af-0f4f-4009-98a1-6e0e97553f6b)
+3. Converting to a decimal number
+   ![image](https://github.com/maxiparis/RomanNumerals/assets/127634681/c4710c94-e46c-4141-abdf-627756f922e0)
+

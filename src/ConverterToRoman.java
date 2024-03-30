@@ -28,9 +28,10 @@ public class ConverterToRoman extends InputManager {
             }
 
             String romanString = convertToRoman(inputAsInt);
-            System.out.println("Result: " + input + " = " + romanString + "\n");
+            printResult(input, romanString);
         }
     }
+
 
     String convertToRoman(Integer decimalNumber) {
         StringBuilder romanString = new StringBuilder();

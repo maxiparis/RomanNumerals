@@ -6,27 +6,33 @@ public class ConverterToDecimal extends InputManager {
     void run(){
         while (true){
             String input;
-            String prompt = "Enter the roman numeral you would like to convert to decimal (or enter x to exit):";
+            String prompt = "Enter the roman numeral you would like to convert to decimal " +
+                    "(enter x to exit or r to see roman numeral rules):";
             input = getInputFromUserWith(prompt);
 
             if (input.equals("x")){
                 break;
+            } else if (input.equals("r")){
+                printRomanRules();
+                continue;
             }
 
             if (!onlyContainsRomanCharacters(input)){
-                printErrorMessage("Please only enter a roman numeral containing M, D, C, L, X, V or I");
+                printErrorMessage("Please enter only roman characters containing M, D, C, L, X, V or I. See rules.");
+                continue;
             }
 
             String romanNumeral = input.toUpperCase();
             Integer decimal = convertToDecimal(romanNumeral);
             if (decimal != null) {
-                System.out.println("Result: " + romanNumeral + " = " + decimal + "\n");
+                printResult(romanNumeral, decimal.toString());
             } else {
-                printErrorMessage("Invalid input.");
+                printErrorMessage("Invalid input. See rules by entering r.");
             }
 
         }
     }
+
 
     Integer convertToDecimal(String romanNumeral) {
         Integer decimal = 0;

@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class ProgramStarter extends InputManager{
+public class ProgramStarter extends TerminalManager {
     //Data Members
     private final ConverterToRoman converterToRoman = new ConverterToRoman();
     private final ConverterToDecimal converterToDecimal = new ConverterToDecimal();

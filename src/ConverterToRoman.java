@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class ConverterToRoman extends InputManager {
+public class ConverterToRoman extends TerminalManager {
     //Members
     private final Table table = Table.getInstance();
 

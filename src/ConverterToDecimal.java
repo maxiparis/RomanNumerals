@@ -1,4 +1,4 @@
-public class ConverterToDecimal extends InputManager {
+public class ConverterToDecimal extends TerminalManager {
     //Members
     private final Table table = Table.getInstance(); //TODO: tests this singleton is working (address)
 
@@ -7,10 +7,10 @@ public class ConverterToDecimal extends InputManager {
         while (true){
             String input;
             String prompt = "Enter the roman numeral you would like to convert to decimal " +
-                    "(enter x to exit or r to see roman numeral rules):";
+                    "(enter e to exit or r to see roman numeral rules):";
             input = getInputFromUserWith(prompt);
 
-            if (input.equals("x")){
+            if (input.equals("e")){
                 break;
             } else if (input.equals("r")){
                 printRomanRules();

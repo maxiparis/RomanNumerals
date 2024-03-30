@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class InputManager {
+public class TerminalManager {
     private final Scanner scanner = new Scanner(System.in);
     String redColor = "\u001B[31m"; //For errors
     String greenColor = "\u001B[32m"; //For input

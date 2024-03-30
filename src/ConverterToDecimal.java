@@ -1,8 +1,14 @@
+
 public class ConverterToDecimal extends TerminalManager {
     //Members
-    private final Table table = Table.getInstance(); //TODO: tests this singleton is working (address)
+    private final Table table = Table.getInstance();
 
     //Methods
+
+    /**
+     * Prompts the user with instructions and retrieve their input. Validates the input and executes the instruction
+     * accordingly. Calls convertToDecimal if input as been given correctly and prints its result.
+     */
     void run(){
         while (true){
             String input;
@@ -34,19 +40,25 @@ public class ConverterToDecimal extends TerminalManager {
     }
 
 
+    /**
+     * Converts the romanNumeral passed as argument into an integer.
+     * @param romanNumeral to be converted into integer.
+     * @return an integer if the conversion was successful, null otherwise.
+     */
     Integer convertToDecimal(String romanNumeral) {
         Integer decimal = 0;
         char letter;
         char nextLetter;
-
         Integer valueLetter;
         Integer valueNextLetter;
 
+        //Checks if there is any digits that repeats more than 3 times
         if (SomeDigitRepeatsTooMuch(romanNumeral)){
             return null;
         }
 
-        //Traverse through each character in the roman numeral
+        //Traverse through each character in the roman numeral and determines if it needs to add or subtract its value
+        //to the total decimal number.
         for (int i = 0; i < romanNumeral.length()-1; i++) {
             letter = romanNumeral.charAt(i);
             nextLetter = romanNumeral.charAt(i+1);
@@ -55,9 +67,11 @@ public class ConverterToDecimal extends TerminalManager {
 
             if (valueLetter < valueNextLetter){
                 if (valueNextLetter > (valueLetter*10)) {
+                    //Invalid case, subtraction is invalid (numbers have too much difference)
                     return null;
                 } else if (String.valueOf(letter).equals("V") || String.valueOf(letter).equals("L")
                         || String.valueOf(letter).equals("D")) {
+                    //Invalid case, V, L, or D cannot be subtracted.
                     return null;
                 } else {
                     decimal-=valueLetter;
@@ -74,7 +88,12 @@ public class ConverterToDecimal extends TerminalManager {
         return decimal;
     }
 
-    boolean SomeDigitRepeatsTooMuch(String romanNumeral) { // M M M M
+    /**
+     * Determines if there is any character in the roman numeral that repeats more than 3 times.
+     * @param romanNumeral string to be analyzed.
+     * @return true if there is any character that repeats more than 3 times, false otherwise.
+     */
+    boolean SomeDigitRepeatsTooMuch(String romanNumeral) {
         int timesRepeated = 1;
         char currentChar;
         char nextChar;
@@ -92,7 +111,6 @@ public class ConverterToDecimal extends TerminalManager {
                 return true;
             }
         }
-
         return false;
     }
 

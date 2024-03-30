@@ -1,10 +1,20 @@
 public class ProgramStarter extends TerminalManager {
+    /**
+     * This class is in charge of starting the program, by transitioning to the first input loop, where the user
+     * will select the conversion they would like to do.
+     */
     //Data Members
     private final ConverterToRoman converterToRoman = new ConverterToRoman();
     private final ConverterToDecimal converterToDecimal = new ConverterToDecimal();
 
-    //Constructor
+    //Methods
+
+    /**
+     * Starts the program by giving a prompt to the user and obtaining input. Validates the input and executes the
+     * user instruction.
+     */
     public void startProgram() {
+
         boolean keepRunning = true;
         String input;
         while (keepRunning) {

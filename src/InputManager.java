@@ -13,7 +13,13 @@ public class InputManager {
         return input.matches("-?\\d+");
     }
 
+    boolean onlyContainsRomanCharacters(String input){
+        return input.matches("[mdcxvilMDCLXVI]+");
+    }
+
     void printErrorMessage(String message){
         System.out.println("**** Error: " + message);
     }
+
+
 }

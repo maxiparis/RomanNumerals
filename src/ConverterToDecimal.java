@@ -45,8 +45,15 @@ public class ConverterToDecimal extends InputManager {
             valueNextLetter = table.getDecimal(String.valueOf(nextLetter));
 
             if (valueLetter < valueNextLetter){
-                decimal -= valueLetter;
-                continue;
+                if (valueNextLetter > (valueLetter*10)) {
+                    return null;
+                } else if (String.valueOf(letter).equals("V") || String.valueOf(letter).equals("L")
+                        || String.valueOf(letter).equals("D")) {
+                    return null;
+                } else {
+                    decimal-=valueLetter;
+                    continue;
+                }
             }
 
             decimal += valueLetter;

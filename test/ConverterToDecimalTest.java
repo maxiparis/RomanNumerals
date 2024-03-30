@@ -79,6 +79,15 @@ class ConverterToDecimalTest {
         Integer result;
         result = converter.convertToDecimal("IIII");
         assertNull(result);
+
+        result = converter.convertToDecimal("XXLXXXX");
+        assertNull(result);
+
+        result = converter.convertToDecimal("CMCCCC");
+        assertNull(result);
+
+        result = converter.convertToDecimal("MMMCDXXXXII");
+        assertNull(result);
     }
 
     @Test
@@ -107,5 +116,49 @@ class ConverterToDecimalTest {
 
         result = converter.convertToDecimal("CDVL");
         assertNull(result);
+    }
+
+    @Test
+    void someDigitRepeatsTooMuchTrue() {
+        boolean result;
+        result = converter.SomeDigitRepeatsTooMuch("MMMM");
+        assertTrue(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("MMMMI");
+        assertTrue(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("XIIII");
+        assertTrue(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("XXXXIX");
+        assertTrue(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("MMMCMXXXXII");
+        assertTrue(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("MMMCMXXVVVV");
+        assertTrue(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("MMMCDXXXXII");
+        assertTrue(result);
+    }
+
+    @Test
+    void someDigitRepeatsTooMuchFalse() {
+        boolean result;
+        result = converter.SomeDigitRepeatsTooMuch("III");
+        assertFalse(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("VIII");
+        assertFalse(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("XIII");
+        assertFalse(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("XXXIX");
+        assertFalse(result);
+
+        result = converter.SomeDigitRepeatsTooMuch("MMMCMXXII");
+        assertFalse(result);
     }
 }

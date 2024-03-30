@@ -36,6 +36,9 @@ public class ConverterToDecimal extends InputManager {
         Integer valueLetter;
         Integer valueNextLetter;
 
+        if (SomeDigitRepeatsTooMuch(romanNumeral)){
+            return null;
+        }
 
         //Traverse through each character in the roman numeral
         for (int i = 0; i < romanNumeral.length()-1; i++) {
@@ -63,6 +66,28 @@ public class ConverterToDecimal extends InputManager {
         decimal += table.getDecimal(String.valueOf(lastLetter));
 
         return decimal;
+    }
+
+    boolean SomeDigitRepeatsTooMuch(String romanNumeral) { // M M M M
+        int timesRepeated = 1;
+        char currentChar;
+        char nextChar;
+        for (int i = 0; i < romanNumeral.length()-1; i++) {
+            currentChar = romanNumeral.charAt(i);
+            nextChar = romanNumeral.charAt(i + 1);
+
+            if(currentChar == nextChar){
+                timesRepeated++;
+            } else {
+                timesRepeated = 1;
+            }
+
+            if(timesRepeated > 3){
+                return true;
+            }
+        }
+
+        return false;
     }
 
 }

@@ -2,7 +2,7 @@
 This program is a terminal-based converter to and from Roman numerals developed for the BYU OIT Coding Challenge. 
 
 ## Installation
-1. Install Java JDK (version 20)
+1. Install Java JDK (version 20 or higher)
 2. Download (or clone repository) the RomanNumerals.jar file from out/artifacts folder.
 
 ## Usage

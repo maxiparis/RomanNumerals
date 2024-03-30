@@ -12,7 +12,6 @@ public class Table {
             instance.initializeTable();
             return instance;
         }
-
         return instance;
     }
 

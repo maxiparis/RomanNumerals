@@ -9,8 +9,8 @@ public class ConverterToRoman extends InputManager {
         String input;
         while (true) {
             String prompt = "Enter the number you would like to convert to roman numeral (or enter x to exit):";
-
             input = getInputFromUserWith(prompt);
+
             if (input.equals("x")){
                 break;
             }

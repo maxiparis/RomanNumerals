@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class ProgramStarter extends InputManager{
     //Data Members
-    private ConverterToRoman converterToRoman = new ConverterToRoman();
+    private final ConverterToRoman converterToRoman = new ConverterToRoman();
+    private final ConverterToDecimal converterToDecimal = new ConverterToDecimal();
 
     //Constructor
     public void startProgram() {
@@ -20,7 +21,7 @@ public class ProgramStarter extends InputManager{
             input = getInputFromUserWith(prompt);
             switch (input) {
                 case "1" -> converterToRoman.run();
-                case "2" -> System.out.println("convert to decimal");
+                case "2" -> converterToDecimal.run();
                 case "3" -> keepRunning = false;
                 default -> System.out.println("Wrong Input. Please enter 1, 2 or 3.");
             }

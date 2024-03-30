@@ -1,4 +1,5 @@
 # Roman Numeral Converter
+This program is a terminal-based converter to and from Roman numerals developed for the BYU OIT Coding Challenge. 
 
 ## Installation
 1. Install Java JDK (version 20)

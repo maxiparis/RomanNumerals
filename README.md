@@ -14,9 +14,10 @@ The documents that contain my thought process to solve this challenge are contai
 ## Features
 1. Conversion from decimal numbers to Roman numerals.
 2. Conversion from Roman numerals to decimal numbers.
-3. Support for a range of input values.
-4. Color formatting in the terminal to enhance the user experience.
-5. Error handling for invalid input:
+3. Unit-tested using JUnit. 
+4. Support for a range of input values.
+5. Color formatting in the terminal to enhance the user experience.
+6. Error handling for invalid input:
    * Decimal input only between 1 and 3999.
    * Subtractive notation only ever involves two symbols.
    * A symbol can be repeated only three times.

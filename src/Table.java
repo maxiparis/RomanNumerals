@@ -2,23 +2,34 @@ import java.util.LinkedHashMap;
 
 public class Table {
     //Data member
+    private static Table instance;
     private LinkedHashMap<String, Integer> table = new LinkedHashMap<>();
 
     //Constructor
-    public Table() {
-       table.put("M", 1000);
-       table.put("CM", 900);
-       table.put("D", 500);
-       table.put("CD", 400);
-       table.put("C", 100);
-       table.put("XC", 90);
-       table.put("L", 50);
-       table.put("XL", 40);
-       table.put("X", 10);
-       table.put("IX", 9);
-       table.put("V", 5);
-       table.put("IV", 4);
-       table.put("I", 1);
+    public static Table getInstance() {
+        if (instance == null){
+            instance = new Table();
+            instance.initializeTable();
+            return instance;
+        }
+
+        return instance;
+    }
+
+    private void initializeTable() {
+        table.put("M", 1000);
+        table.put("CM", 900);
+        table.put("D", 500);
+        table.put("CD", 400);
+        table.put("C", 100);
+        table.put("XC", 90);
+        table.put("L", 50);
+        table.put("XL", 40);
+        table.put("X", 10);
+        table.put("IX", 9);
+        table.put("V", 5);
+        table.put("IV", 4);
+        table.put("I", 1);
     }
 
     //Methods - getters
